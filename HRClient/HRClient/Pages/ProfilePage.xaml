@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HRClient.Pages.ProfilePage">
+
+    <ScrollView VerticalOptions="Start">
+
+        <VerticalStackLayout>
+            <!--Учетная запись -->
+            <Frame
+                WidthRequest="600"
+                HeightRequest="450"
+                HasShadow="True"
+                CornerRadius="20"
+                BackgroundColor="AliceBlue"
+                HorizontalOptions="Center"
+                >
+
+                <VerticalStackLayout
+                    HorizontalOptions="Center"
+                    >
+
+                    <Label 
+                        Text="Учетная запись"
+                        TextColor="Black"
+                        FontFamily="Arial"
+                        FontSize="22"
+                        HorizontalOptions="Center"
+                        />
+
+                    <Frame CornerRadius="100" 
+                        Margin="0, 20, 0, 0"
+                        Padding="0" 
+                        WidthRequest ="120" 
+                        HeightRequest="120">
+
+                        <Image
+                            x:Name="photo"
+                            Aspect="AspectFill"
+                            >
+                        </Image>
+                    </Frame>
+
+                    <ImageButton 
+                        Source="update_photo.png"
+                        Clicked="ReplacementPhoto"
+                        WidthRequest="15"
+                        HeightRequest="15"
+                        BackgroundColor="Transparent"
+                        Margin="90, -40, 0, 0"
+                        >
+                        <ImageButton.Triggers>
+                            <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
+                                <Setter Property="Opacity" Value="0.5" />
+                            </Trigger>
+                        </ImageButton.Triggers>
+                    </ImageButton>
+
+                    <Label 
+                        x:Name="roles"
+                        TextColor="LawnGreen"
+                        FontAttributes="Italic"
+                        FontFamily="Arial"
+                        FontSize="14"
+                        HorizontalOptions="Center"
+                        >
+                    </Label>
+
+
+                    <Grid Margin="0, 40, 0, 0">
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="220"  />
+                            <ColumnDefinition Width="200" />
+                            <ColumnDefinition Width="60" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="60" />
+                        </Grid.RowDefinitions>
+
+                        <Label 
+                            Text="Логин"
+                            TextColor="Black"
+                            FontFamily="Arial"
+                            FontSize="16"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            >
+                        </Label>
+                        <Label 
+                            Text="Почта"
+                            TextColor="Black"
+                            FontFamily="Arial"
+                            FontSize="16"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            >
+                        </Label>
+                        <Label 
+                            Text="Номер телефона"
+                            TextColor="Black"
+                            FontFamily="Arial"
+                            FontSize="16"
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            >
+                        </Label>
+
+                        <Label
+                            x:Name="username"
+                            TextColor="DeepSkyBlue"
+                            FontFamily="Arial"
+                            FontSize="16"
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            >
+                        </Label>
+                        <Label 
+                            x:Name="email"
+                            TextColor="DeepSkyBlue"
+                            FontFamily="Arial"
+                            FontSize="16"
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            >
+                        </Label>
+                        <Label 
+                            x:Name="number"
+                            TextColor="DeepSkyBlue"
+                            FontFamily="Arial"
+                            FontSize="16"
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            >
+                        </Label>
+
+                        <ImageButton
+                            Margin="0, -50, 0, 0"
+                            Source="update_text.png"
+                            Clicked="UpdateUsername"
+                            MaximumHeightRequest="5"
+                            MaximumWidthRequest="5"
+                            HeightRequest="5"
+                            WidthRequest="5"
+                            Aspect="Center"
+                            BackgroundColor="Transparent"
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            >
+                            <ImageButton.Triggers>
+                                <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
+                                    <Setter Property="Opacity" Value="0.5" />
+                                </Trigger>
+                            </ImageButton.Triggers>
+                        </ImageButton>
+                        <ImageButton
+                            Margin="0, -50, 0, 0"
+                            Source="update_text.png"
+                            Clicked="UpdateEmail"
+                            BackgroundColor="Transparent"
+                            MaximumHeightRequest="5"
+                            MaximumWidthRequest="5"
+                            HeightRequest="5"
+                            WidthRequest="5"
+                            Aspect="Center"
+                            Grid.Column="2"
+                            Grid.Row="1"
+                            >
+                            <ImageButton.Triggers>
+                                <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
+                                    <Setter Property="Opacity" Value="0.5" />
+                                </Trigger>
+                            </ImageButton.Triggers>
+                        </ImageButton>
+                        <ImageButton
+                            Margin="0, -50, 0, 0"
+                            Source="update_text.png"
+                            Clicked="UpdatePhoneNumber"
+                            BackgroundColor="Transparent"
+                            MaximumHeightRequest="5"
+                            MaximumWidthRequest="5"
+                            HeightRequest="5"
+                            WidthRequest="5"
+                            Aspect="Center"
+                            Grid.Column="2"
+                            Grid.Row="2"
+                            >
+                            <ImageButton.Triggers>
+                                <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
+                                    <Setter Property="Opacity" Value="0.5" />
+                                </Trigger>
+                            </ImageButton.Triggers>
+                        </ImageButton>
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!--Личные данные -->
+            <Frame
+                Margin="0, 50, 0, 20"
+                WidthRequest="600"
+                HeightRequest="550"
+                HasShadow="True"
+                CornerRadius="20"
+                BackgroundColor="AliceBlue"
+                HorizontalOptions="Center"
+                >
+
+                <VerticalStackLayout HorizontalOptions="Center">
+                    <Label 
+                        Text="Личные данные"
+                        TextColor="Black"
+                        FontFamily="Arial"
+                        FontSize="22"
+                        HorizontalOptions="Center"
+                        />
+                    
+                    <Grid Margin="0, 60, 0, 0">
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="130"  />
+                            <ColumnDefinition Width="220" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80" />
+                            <RowDefinition Height="80" />
+                            <RowDefinition Height="80" />
+                            <RowDefinition Height="80" />
+                        </Grid.RowDefinitions>
+
+                        <Label 
+                            Text="Имя"
+                            TextColor="Black"
+                            FontFamily="Arial"
+                            FontSize="16"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            >
+                        </Label>
+                        <Label 
+                            Text="Фамилия"
+                            TextColor="Black"
+                            FontFamily="Arial"
+                            FontSize="16"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            >
+                        </Label>
+                        <Label 
+                            Text="Отчество"
+                            TextColor="Black"
+                            FontFamily="Arial"
+                            FontSize="16"
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            >
+                        </Label>
+                        <Label 
+                            Text="Возраст"
+                            TextColor="Black"
+                            FontFamily="Arial"
+                            FontSize="16"
+                            Grid.Column="0"
+                            Grid.Row="3"
+                            >
+                        </Label>
+
+                        <Entry
+                            x:Name="entry_first_name"
+                            FontFamily="Helvetica" 
+                            FontSize="16"
+                            TextColor="DeepSkyBlue"
+                            Margin="0, -70, 0, 0"
+                            HeightRequest="6"
+                            MaxLength = "20"
+                            BackgroundColor="White"
+                            ClearButtonVisibility="WhileEditing"
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            />
+                        <Entry
+                            x:Name="entry_miidle_name"
+                            FontFamily="Helvetica" 
+                            FontSize="16"
+                            TextColor="DeepSkyBlue"
+                            MaxLength = "20"
+                            Margin="0, -70, 0, 0"
+                            HeightRequest="6"
+                            BackgroundColor="White"
+                            ClearButtonVisibility="WhileEditing"
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            />
+                        <Entry
+                            x:Name="entry_last_name"
+                            FontFamily="Helvetica" 
+                            FontSize="16"
+                            TextColor="DeepSkyBlue"
+                            Margin="0, -70, 0, 0"
+                            HeightRequest="6"
+                            MaxLength = "20"
+                            BackgroundColor="White"
+                            ClearButtonVisibility="WhileEditing"
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            />
+                        <Entry
+                            x:Name="entry_age"
+                            FontFamily="Helvetica" 
+                            FontSize="16"
+                            TextColor="DeepSkyBlue"
+                            Margin="0, -70, 0, 0"
+                            HeightRequest="6"
+                            MaxLength = "20"
+                            BackgroundColor="White"
+                            ClearButtonVisibility="WhileEditing"
+                            Grid.Column="1"
+                            Grid.Row="3"
+                            />
+                    </Grid>
+
+                    <Button
+                        x:Name="login_button"
+                        Margin="0,20,0,0"
+                        Text="Сохранить"
+                        Clicked="SaveUserInfo"
+                        WidthRequest="115"
+                        HeightRequest="45"
+                        >
+                        <Button.Triggers>
+                            <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                                <Setter Property="Opacity" Value="0.5" />
+                            </Trigger>
+                        </Button.Triggers>
+                    </Button>
+
+                </VerticalStackLayout>
+                
+
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

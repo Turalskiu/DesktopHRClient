@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="HRClient.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:HRClient.Pages"
+    xmlns:control="clr-namespace:HRClient.Views"
+    FlyoutHeaderBehavior="CollapseOnScroll"
+    FlyoutBehavior="Flyout"
+    FlyoutBackgroundColor="AliceBlue"
+    FlyoutWidth="320"
+    FlyoutVerticalScrollMode="Auto"
+    FlyoutIsPresented="true"
+    >
+
+    <Shell.FlyoutHeader>
+        <control:FlyoutHeader />
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Кабинет"
+                Icon="cabinet.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:CabinetPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Профиль"
+                Icon="profile.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:ProfilePage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Чат"
+                Icon="chat.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:MessagesPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Настройки"
+                Icon="settings.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <MenuItem Text="Помощь"
+              IconImageSource="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://learn.microsoft.com/dotnet/maui/fundamentals/shell" />
+
+
+    <Shell.FlyoutFooter>
+        <control:FlyoutFooter />
+    </Shell.FlyoutFooter>
+
+</Shell>

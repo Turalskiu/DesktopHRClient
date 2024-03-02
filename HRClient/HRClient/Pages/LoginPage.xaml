@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:trig="clr-namespace:HRClient.Triggers"
+             x:Class="HRClient.Pages.LoginPage"
+             Title="LoginPage">
+
+    <Frame
+        WidthRequest="370"
+        HeightRequest="440"
+        HasShadow="True"
+        CornerRadius="20"
+        BackgroundColor="AliceBlue"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        >
+
+        <VerticalStackLayout
+            HorizontalOptions="Center"
+            >
+
+            <Label 
+                Text="Авторизация"
+                TextColor="LightSlateGray"
+                FontFamily="Arial"
+                FontSize="20"
+                HorizontalOptions="Center"
+                />
+
+            <Entry
+                x:Name="login_entry"
+                Margin="0, 50, 0, 0"
+                WidthRequest="300"
+                Placeholder = "Логин" 
+                FontFamily="Helvetica" 
+                FontSize="16"
+                BackgroundColor="White"
+                MaxLength = "20"
+                ClearButtonVisibility="WhileEditing"
+                >
+            </Entry>
+
+            <Entry
+                x:Name="password_entry"
+                Margin="0, 20, 0, 0"
+                WidthRequest="300"
+                Placeholder="Пароль"
+                FontFamily="Helvetica"
+                FontSize="16"
+                BackgroundColor="White"
+                MaxLength="30"
+                IsPassword="True" />
+
+            <StackLayout Margin="0,6,0,0" HorizontalOptions="Center" Orientation="Horizontal" Padding="0">
+                <CheckBox IsChecked="false"/>
+                <Label
+                    Margin="-10, 0, 0, 0"
+                    Text="Запомнить?" 
+                    TextColor="DarkGray" 
+                    FontSize="13"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    />
+                <Button
+                    Margin="150,-100,0,0"
+                    Padding="5,0,0,0"
+                    Text="👁"
+                    Clicked="TogglePasswordVisibility"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    BorderWidth="0"
+                    HeightRequest="10"
+                    WidthRequest="40"
+                    >
+                    <Button.Triggers>
+                        <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                            <Setter Property="Opacity" Value="0.5" />
+                        </Trigger>
+                    </Button.Triggers>
+                </Button>
+            </StackLayout>
+
+            <Button
+                x:Name="restore_password"
+                Margin="170,-44,0,0"
+                Text="Востановить пароль"
+                TextColor="Green"
+                FontSize="13"
+                HeightRequest="5"
+                Clicked="RestorePassword"
+                BackgroundColor="AliceBlue"
+                BorderWidth="0"
+                >
+                <Button.Triggers>
+                    <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                        <Setter Property="Opacity" Value="0.5" />
+                    </Trigger>
+                </Button.Triggers>
+            </Button>
+
+
+            <Button
+                x:Name="login_button"
+                Margin="0,30,0,0"
+                Text="Войти"
+                Clicked="Login"
+                WidthRequest="115"
+                HeightRequest="45"
+                >
+                <Button.Triggers>
+                    <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                        <Setter Property="Opacity" Value="0.5" />
+                    </Trigger>
+                </Button.Triggers>
+            </Button>
+
+
+            <Button
+                x:Name="registrationd"
+                Margin="0, 15, 0, 0"
+                Text="Зарегестрироваться"
+                TextColor="Blue"
+                FontSize="13"
+                Clicked="Registration"
+                BackgroundColor="AliceBlue"
+                BorderWidth="0"
+                >
+                <Button.Triggers>
+                    <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                        <Setter Property="Opacity" Value="0.5" />
+                    </Trigger>
+                </Button.Triggers>
+            </Button>
+
+            <Label
+                x:Name="info_label"
+                Margin="0, 15, 0, 0"
+                TextColor="Red"
+                FontFamily="Arial"
+                FontSize="16"
+                HorizontalOptions="Center"
+                IsVisible="False"
+                />
+
+        </VerticalStackLayout>
+    </Frame>
+    
+</ContentPage>
