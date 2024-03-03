@@ -6,11 +6,12 @@
     xmlns:local="clr-namespace:HRClient.Pages"
     xmlns:control="clr-namespace:HRClient.Views"
     FlyoutHeaderBehavior="CollapseOnScroll"
-    FlyoutBehavior="Flyout"
+    Shell.FlyoutBehavior="Flyout"
     FlyoutBackgroundColor="AliceBlue"
     FlyoutWidth="320"
     FlyoutVerticalScrollMode="Auto"
-    FlyoutIsPresented="true"
+    FlyoutIsPresented="True"
+    NavBarIsVisible="False"
     >
 
     <Shell.FlyoutHeader>
@@ -45,8 +46,8 @@
 
     <MenuItem Text="Помощь"
               IconImageSource="help.png"
-              Command="{Binding HelpCommand}"
-              CommandParameter="https://learn.microsoft.com/dotnet/maui/fundamentals/shell" />
+              Clicked="HelpClicked"
+              />
 
 
     <Shell.FlyoutFooter>

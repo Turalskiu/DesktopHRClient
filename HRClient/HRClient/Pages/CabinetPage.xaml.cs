@@ -1,4 +1,7 @@
-﻿using Microsoft.Maui.Platform;
+﻿using HRClient.Settings;
+using HRClient.Settings.Model;
+using Microsoft.Maui.Platform;
+using System.Text.Json;
 
 namespace HRClient.Pages
 {
@@ -9,6 +12,7 @@ namespace HRClient.Pages
         public CabinetPage()
         {
             InitializeComponent();
+            AppSettings.ExecuteSettings(this);
         }
 
         private void OnCounterClicked(object sender, EventArgs e)

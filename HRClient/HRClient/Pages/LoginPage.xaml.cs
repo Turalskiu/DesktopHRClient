@@ -1,3 +1,6 @@
+using CommunityToolkit.Maui.Views;
+using HRClient.Pages.Modal;
+
 namespace HRClient.Pages;
 
 public partial class LoginPage : ContentPage
@@ -23,9 +26,11 @@ public partial class LoginPage : ContentPage
 
     private void RestorePassword(object sender, EventArgs e)
     {
+        this.ShowPopup(new RestorePasswordModal());
     }
 
     private void Registration(object sender, EventArgs e)
     {
+        Launcher.OpenAsync(new System.Uri("https://learn.microsoft.com/dotnet/maui/fundamentals/shell"));
     }
 }

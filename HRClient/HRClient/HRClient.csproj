@@ -57,6 +57,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\background\b2.jpg" />
+	  <None Remove="Resources\Images\background\b3.jpg" />
+	  <None Remove="Resources\Images\background\b4.jpg" />
+	  <None Remove="Resources\Images\background\b5.jpg" />
+	  <None Remove="Resources\Images\background\b6.jpg" />
+	  <None Remove="Resources\Images\background\b7.jpg" />
 	  <None Remove="Resources\Images\contacto.png" />
 	  <None Remove="Resources\Images\hanburguer.png" />
 	  <None Remove="Resources\Images\icon\cabinet.png" />
@@ -72,9 +78,11 @@
 	  <None Remove="Resources\Images\icon\update_text.png" />
 	  <None Remove="Resources\Images\listadetareas.png" />
 	  <None Remove="Resources\Images\recordatorios.png" />
+	  <None Remove="Resources\Raw\AppSettings.json" />
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.7" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.7" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
@@ -84,6 +92,9 @@
 	  <Compile Update="Pages\CabinetPage.xaml.cs">
 	    <DependentUpon>CabinetPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="Pages\Modal\UpdateUsernameModal.xaml.cs">
+	    <DependentUpon>UpdateUsernameModal.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -91,6 +102,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\MessagesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Modal\RestorePasswordModal.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Modal\UpdateUsernameModal.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\ProfilePage.xaml">
@@ -113,6 +130,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Include="Resources\Images\background\b1.jpg" />
+	  <MauiImage Include="Resources\Images\background\b2.jpg" />
+	  <MauiImage Include="Resources\Images\background\b3.jpg" />
+	  <MauiImage Include="Resources\Images\background\b4.jpg" />
+	  <MauiImage Include="Resources\Images\background\b5.jpg" />
+	  <MauiImage Include="Resources\Images\background\b6.jpg" />
+	  <MauiImage Include="Resources\Images\background\b7.jpg" />
 	  <MauiImage Include="Resources\Images\icon\cabinet.png" />
 	  <MauiImage Include="Resources\Images\icon\chat.png" />
 	  <MauiImage Include="Resources\Images\icon\contacto.png" />
@@ -127,6 +151,12 @@
 	  <MauiImage Include="Resources\Images\icon\profile.png" />
 	  <MauiImage Include="Resources\Images\icon\update_photo.png" />
 	  <MauiImage Include="Resources\Images\icon\update_text.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiAsset Update="Resources\Raw\AppSettings.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiAsset>
 	</ItemGroup>
 
 </Project>

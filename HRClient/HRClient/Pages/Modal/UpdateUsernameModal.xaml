@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+           x:Class="HRClient.Pages.Modal.UpdateUsernameModal" 
+           Color="Transparent"
+           >
+
+    <Frame
+        WidthRequest="400"
+        HeightRequest="270"
+        HasShadow="True"
+        CornerRadius="20"
+        BackgroundColor="Lavender"
+        >
+        <StackLayout 
+            HorizontalOptions="Center"
+            >
+        
+            <Label Text="Изменить логин"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,0" />
+
+            <Entry
+                x:Name="entry_new_username"
+                FontFamily="Helvetica" 
+                FontSize="16"
+                TextColor="DeepSkyBlue"
+                Margin="0, 40, 0, 0"
+                HeightRequest="6"
+                MaxLength = "20"
+                BackgroundColor="White"
+                ClearButtonVisibility="WhileEditing"
+                />
+
+            <HorizontalStackLayout
+                Margin="0, 20, 0, 0"
+                HorizontalOptions="Center"
+                >
+                
+                <Button 
+                    Margin="0, 0, 0, 0"
+                    Text="Сохранить" 
+                    Clicked="SaveClicked" 
+                    >
+                    <Button.Triggers>
+                        <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                            <Setter Property="Opacity" Value="0.5" />
+                        </Trigger>
+                    </Button.Triggers>
+                </Button>
+
+                <Button 
+                    Margin="15, 0, 0, 0"
+                    Text="Отмена" 
+                    Clicked="CloseClicked"
+                    BackgroundColor="Red"
+                    >
+                    <Button.Triggers>
+                        <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                            <Setter Property="Opacity" Value="0.5" />
+                        </Trigger>
+                    </Button.Triggers>
+                </Button>
+
+            </HorizontalStackLayout>
+
+            <Label
+                x:Name="info_label"
+                Margin="0, 15, 0, 0"
+                FontFamily="Arial"
+                FontSize="16"
+                HorizontalOptions="Center"
+                IsVisible="False"
+                />
+
+        </StackLayout>
+    </Frame>
+    
+
+</mct:Popup>

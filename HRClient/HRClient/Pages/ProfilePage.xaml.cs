@@ -1,3 +1,7 @@
+using CommunityToolkit.Maui.Views;
+using HRClient.Pages.Modal;
+using HRClient.Settings;
+
 namespace HRClient.Pages;
 
 public partial class ProfilePage : ContentPage
@@ -5,7 +9,10 @@ public partial class ProfilePage : ContentPage
 	public ProfilePage()
 	{
 		InitializeComponent();
-		photo.Source = "user_photo_default.png";
+
+        AppSettings.ExecuteSettings(this);
+
+        photo.Source = "user_photo_default.png";
 
         username.Text = "Turalskiu";
         email.Text = "ibishov.tural20@mail.ru";
@@ -24,6 +31,7 @@ public partial class ProfilePage : ContentPage
 
     private void UpdateUsername(object sender, EventArgs e)
     {
+        this.ShowPopup(new UpdateUsernameModal(username.Text));
     }
 
     private void UpdateEmail(object sender, EventArgs e)
