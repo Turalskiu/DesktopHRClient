@@ -1,11 +1,130 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HRClient.Pages.SettingsPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             x:Class="HRClient.Pages.SettingsPage"
+             xmlns:model="clr-namespace:HRClient.Models.Interface"
+             >
+
+    <ScrollView VerticalOptions="Start">
+
+        <VerticalStackLayout>
+            
+            <!-- Интерфейс -->
+            <Frame
+                Margin="0, 15, 0, 0"
+                WidthRequest="600"
+                HeightRequest="450"
+                HasShadow="True"
+                CornerRadius="20"
+                BackgroundColor="AliceBlue"
+                HorizontalOptions="Center"
+                >
+
+                <VerticalStackLayout
+                    HorizontalOptions="Center"
+                    >
+                    
+                    <Label 
+                        Text="Интерфейс"
+                        TextColor="Black"
+                        FontFamily="Arial"
+                        FontSize="22"
+                        HorizontalOptions="Center"
+                        />
+
+                    <Label 
+                        Margin="0, 30, 0, 0"
+                        Text="Тема"
+                        TextColor="Black"
+                        FontFamily="Arial"
+                        FontSize="18"
+                        HorizontalOptions="Center"
+                        />
+                    
+                    <CarouselView x:Name="carouselView"
+                                  Margin="0, 10, 0, 0"
+                                  IndicatorView="indicatorView"
+                                  CurrentItemChanged="carouselViewCurrentItemChanged"
+                                  >
+                        <CarouselView.ItemsSource>
+                            <x:Array Type="{x:Type model:BackgroundThemeSettings}">
+                                <model:BackgroundThemeSettings ImagePath="" />
+                                <model:BackgroundThemeSettings ImagePath="b1.jpg" />
+                                <model:BackgroundThemeSettings ImagePath="b2.jpg"/>
+                                <model:BackgroundThemeSettings ImagePath="b3.jpg" />
+                                <model:BackgroundThemeSettings ImagePath="b4.jpg" />
+                                <model:BackgroundThemeSettings ImagePath="b5.jpg"/>
+                                <model:BackgroundThemeSettings ImagePath="b6.jpg" />
+                                <model:BackgroundThemeSettings ImagePath="b7.jpg" />
+                            </x:Array>
+                        </CarouselView.ItemsSource>
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="AliceBlue" WidthRequest="250" HeightRequest="150">
+                                    <VerticalStackLayout>
+                                        <Image Source="{Binding ImagePath}"   />
+                                    </VerticalStackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <IndicatorView
+                        Margin="0, 10, 0, 0"
+                        x:Name="indicatorView"
+                        IndicatorColor="LightGray"
+                        SelectedIndicatorColor="DarkGray"
+                        HorizontalOptions="Center" />
+
+                    <Button
+                        x:Name="save_theme_button"
+                        Margin="0,40,0,0"
+                        Text="Сохранить"
+                        Clicked="UpdateTheme"
+                        WidthRequest="115"
+                        HeightRequest="45"
+                        >
+                        <Button.Triggers>
+                            <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                                <Setter Property="Opacity" Value="0.5" />
+                            </Trigger>
+                        </Button.Triggers>
+                    </Button>
+                </VerticalStackLayout>
+
+            </Frame>
+
+
+            <!-- Безопастность -->
+            <Frame
+                Margin="0, 30, 0, 30"
+                WidthRequest="600"
+                HeightRequest="450"
+                HasShadow="True"
+                CornerRadius="20"
+                BackgroundColor="AliceBlue"
+                HorizontalOptions="Center"
+                >
+
+                <VerticalStackLayout
+                    HorizontalOptions="Center"
+                    >
+
+                    <Label 
+                        Text="Безопасность"
+                        TextColor="Black"
+                        FontFamily="Arial"
+                        FontSize="22"
+                        HorizontalOptions="Center"
+                        />
+
+
+                </VerticalStackLayout>
+
+            </Frame>
+            
+            
+        </VerticalStackLayout>
+
+    </ScrollView>
+
 </ContentPage>

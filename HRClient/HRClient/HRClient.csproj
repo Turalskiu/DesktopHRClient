@@ -78,7 +78,6 @@
 	  <None Remove="Resources\Images\icon\update_text.png" />
 	  <None Remove="Resources\Images\listadetareas.png" />
 	  <None Remove="Resources\Images\recordatorios.png" />
-	  <None Remove="Resources\Raw\AppSettings.json" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -125,7 +124,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Models\" />
 	  <Folder Include="Services\" />
 	</ItemGroup>
 
@@ -151,12 +149,6 @@
 	  <MauiImage Include="Resources\Images\icon\profile.png" />
 	  <MauiImage Include="Resources\Images\icon\update_photo.png" />
 	  <MauiImage Include="Resources\Images\icon\update_text.png" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiAsset Update="Resources\Raw\AppSettings.json">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </MauiAsset>
 	</ItemGroup>
 
 </Project>

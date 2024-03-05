@@ -13,6 +13,7 @@ namespace HRClient.Pages
         {
             InitializeComponent();
             AppSettings.ExecuteSettings(this);
+            AppSettings.Pages.Add(this);
         }
 
         private void OnCounterClicked(object sender, EventArgs e)

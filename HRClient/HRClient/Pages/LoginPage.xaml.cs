@@ -1,5 +1,6 @@
 using CommunityToolkit.Maui.Views;
 using HRClient.Pages.Modal;
+using HRClient.Settings;
 
 namespace HRClient.Pages;
 
@@ -8,7 +9,8 @@ public partial class LoginPage : ContentPage
 	public LoginPage()
 	{
 		InitializeComponent();
-	}
+        AppSettings.Pages.Add(this);
+    }
 
     private void TogglePasswordVisibility(object sender, EventArgs e)
     {

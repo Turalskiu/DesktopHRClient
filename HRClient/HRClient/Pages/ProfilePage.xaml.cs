@@ -11,6 +11,7 @@ public partial class ProfilePage : ContentPage
 		InitializeComponent();
 
         AppSettings.ExecuteSettings(this);
+        AppSettings.Pages.Add(this);
 
         photo.Source = "user_photo_default.png";
 
