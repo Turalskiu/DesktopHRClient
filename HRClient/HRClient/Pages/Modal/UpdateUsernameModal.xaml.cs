@@ -23,4 +23,16 @@ public partial class UpdateUsernameModal: Popup
         info_label.TextColor = Colors.Red;
         info_label.IsVisible = true;
     }
+
+
+
+    private void OnPointerEnteredButton(object sender, EventArgs e)
+    {
+        ((Button)sender).Opacity = 0.5;
+    }
+
+    private void OnPointerExitedButton(object sender, EventArgs e)
+    {
+        ((Button)sender).Opacity = 1;
+    }
 }

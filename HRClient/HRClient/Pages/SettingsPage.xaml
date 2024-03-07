@@ -27,7 +27,8 @@
                     <Label 
                         Text="Интерфейс"
                         TextColor="Black"
-                        FontFamily="Arial"
+                        FontFamily="Selawik"
+                        FontAttributes="Bold"
                         FontSize="22"
                         HorizontalOptions="Center"
                         />
@@ -36,7 +37,8 @@
                         Margin="0, 30, 0, 0"
                         Text="Тема"
                         TextColor="Black"
-                        FontFamily="Arial"
+                        FontFamily="Selawik"
+                        FontAttributes="Bold"
                         FontSize="18"
                         HorizontalOptions="Center"
                         />
@@ -79,15 +81,22 @@
                         x:Name="save_theme_button"
                         Margin="0,40,0,0"
                         Text="Сохранить"
+                        FontFamily="Selawik"
                         Clicked="UpdateTheme"
                         WidthRequest="115"
                         HeightRequest="45"
                         >
                         <Button.Triggers>
                             <Trigger TargetType="Button" Property="IsPressed" Value="True">
-                                <Setter Property="Opacity" Value="0.5" />
+                                <Setter Property="BackgroundColor" Value="DeepSkyBlue" />
                             </Trigger>
                         </Button.Triggers>
+                        <Button.GestureRecognizers>
+                            <PointerGestureRecognizer
+                                PointerEntered="OnPointerEnteredButton"
+                                PointerExited="OnPointerExitedButton"
+                                />
+                        </Button.GestureRecognizers>
                     </Button>
                 </VerticalStackLayout>
 
@@ -112,10 +121,12 @@
                     <Label 
                         Text="Безопасность"
                         TextColor="Black"
-                        FontFamily="Arial"
+                        FontFamily="Selawik"
+                        FontAttributes="Bold"
                         FontSize="22"
                         HorizontalOptions="Center"
                         />
+                    
 
 
                 </VerticalStackLayout>

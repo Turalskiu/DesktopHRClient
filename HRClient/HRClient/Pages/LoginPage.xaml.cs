@@ -25,7 +25,6 @@ public partial class LoginPage : ContentPage
         info_label.IsVisible = true;
     }
 
-
     private void RestorePassword(object sender, EventArgs e)
     {
         this.ShowPopup(new RestorePasswordModal());
@@ -34,5 +33,17 @@ public partial class LoginPage : ContentPage
     private void Registration(object sender, EventArgs e)
     {
         Launcher.OpenAsync(new System.Uri("https://learn.microsoft.com/dotnet/maui/fundamentals/shell"));
+    }
+
+
+
+    private void OnPointerEnteredButton(object sender, EventArgs e)
+    {
+        ((Button)sender).Opacity = 0.5;
+    }
+
+    private void OnPointerExitedButton(object sender, EventArgs e)
+    {
+        ((Button)sender).Opacity = 1;
     }
 }

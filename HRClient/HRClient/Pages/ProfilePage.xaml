@@ -26,6 +26,7 @@
                         Text="Учетная запись"
                         TextColor="Black"
                         FontFamily="Arial"
+                        FontAttributes="Bold"
                         FontSize="22"
                         HorizontalOptions="Center"
                         />
@@ -53,9 +54,15 @@
                         >
                         <ImageButton.Triggers>
                             <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
-                                <Setter Property="Opacity" Value="0.5" />
+                                <Setter Property="Padding" Value="10" />
                             </Trigger>
                         </ImageButton.Triggers>
+                        <ImageButton.GestureRecognizers>
+                            <PointerGestureRecognizer
+                                PointerEntered="OnPointerEnteredImageButton"
+                                PointerExited="OnPointerExitedImageButton"
+                        />
+                        </ImageButton.GestureRecognizers>
                     </ImageButton>
 
                     <Label 
@@ -152,9 +159,15 @@
                             >
                             <ImageButton.Triggers>
                                 <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
-                                    <Setter Property="Opacity" Value="0.5" />
+                                    <Setter Property="Rotation" Value="-20" />
                                 </Trigger>
                             </ImageButton.Triggers>
+                            <ImageButton.GestureRecognizers>
+                                <PointerGestureRecognizer
+                                    PointerEntered="OnPointerEnteredImageButton"
+                                    PointerExited="OnPointerExitedImageButton"
+                                />
+                            </ImageButton.GestureRecognizers>
                         </ImageButton>
                         <ImageButton
                             Margin="0, -50, 0, 0"
@@ -171,9 +184,15 @@
                             >
                             <ImageButton.Triggers>
                                 <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
-                                    <Setter Property="Opacity" Value="0.5" />
+                                    <Setter Property="Rotation" Value="-20" />
                                 </Trigger>
                             </ImageButton.Triggers>
+                            <ImageButton.GestureRecognizers>
+                                <PointerGestureRecognizer
+                                    PointerEntered="OnPointerEnteredImageButton"
+                                    PointerExited="OnPointerExitedImageButton"
+                                />
+                            </ImageButton.GestureRecognizers>
                         </ImageButton>
                         <ImageButton
                             Margin="0, -50, 0, 0"
@@ -190,9 +209,15 @@
                             >
                             <ImageButton.Triggers>
                                 <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
-                                    <Setter Property="Opacity" Value="0.5" />
+                                    <Setter Property="Rotation" Value="-20" />
                                 </Trigger>
                             </ImageButton.Triggers>
+                            <ImageButton.GestureRecognizers>
+                                <PointerGestureRecognizer
+                                    PointerEntered="OnPointerEnteredImageButton"
+                                    PointerExited="OnPointerExitedImageButton"
+                                />
+                            </ImageButton.GestureRecognizers>
                         </ImageButton>
                     </Grid>
                 </VerticalStackLayout>
@@ -213,6 +238,7 @@
                     <Label 
                         Text="Личные данные"
                         TextColor="Black"
+                        FontAttributes="Bold"
                         FontFamily="Arial"
                         FontSize="22"
                         HorizontalOptions="Center"
@@ -331,9 +357,15 @@
                         >
                         <Button.Triggers>
                             <Trigger TargetType="Button" Property="IsPressed" Value="True">
-                                <Setter Property="Opacity" Value="0.5" />
+                                <Setter Property="BackgroundColor" Value="DeepSkyBlue" />
                             </Trigger>
                         </Button.Triggers>
+                        <Button.GestureRecognizers>
+                            <PointerGestureRecognizer
+                            PointerEntered="OnPointerEnteredButton"
+                            PointerExited="OnPointerExitedButton"
+                            />
+                        </Button.GestureRecognizers>
                     </Button>
 
                 </VerticalStackLayout>

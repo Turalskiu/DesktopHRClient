@@ -63,6 +63,11 @@
 	  <None Remove="Resources\Images\background\b5.jpg" />
 	  <None Remove="Resources\Images\background\b6.jpg" />
 	  <None Remove="Resources\Images\background\b7.jpg" />
+	  <None Remove="Resources\Images\cabinet_menu\body\group.png" />
+	  <None Remove="Resources\Images\cabinet_menu\body\invitations.png" />
+	  <None Remove="Resources\Images\cabinet_menu\body\knowledge_base.png" />
+	  <None Remove="Resources\Images\cabinet_menu\body\template.png" />
+	  <None Remove="Resources\Images\cabinet_menu\body\test.png" />
 	  <None Remove="Resources\Images\contacto.png" />
 	  <None Remove="Resources\Images\hanburguer.png" />
 	  <None Remove="Resources\Images\icon\cabinet.png" />
@@ -125,6 +130,7 @@
 
 	<ItemGroup>
 	  <Folder Include="Services\" />
+	  <Folder Include="Utils\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -135,6 +141,10 @@
 	  <MauiImage Include="Resources\Images\background\b5.jpg" />
 	  <MauiImage Include="Resources\Images\background\b6.jpg" />
 	  <MauiImage Include="Resources\Images\background\b7.jpg" />
+	  <MauiImage Include="Resources\Images\cabinet_menu\body\group.png" />
+	  <MauiImage Include="Resources\Images\cabinet_menu\body\invitations.png" />
+	  <MauiImage Include="Resources\Images\cabinet_menu\body\knowledge_base.png" />
+	  <MauiImage Include="Resources\Images\cabinet_menu\body\template.png" />
 	  <MauiImage Include="Resources\Images\icon\cabinet.png" />
 	  <MauiImage Include="Resources\Images\icon\chat.png" />
 	  <MauiImage Include="Resources\Images\icon\contacto.png" />
@@ -149,6 +159,10 @@
 	  <MauiImage Include="Resources\Images\icon\profile.png" />
 	  <MauiImage Include="Resources\Images\icon\update_photo.png" />
 	  <MauiImage Include="Resources\Images\icon\update_text.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\cabinet_menu\body\test.png" />
 	</ItemGroup>
 
 </Project>

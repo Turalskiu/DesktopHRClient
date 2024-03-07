@@ -46,9 +46,15 @@
                     >
                     <Button.Triggers>
                         <Trigger TargetType="Button" Property="IsPressed" Value="True">
-                            <Setter Property="Opacity" Value="0.5" />
+                            <Setter Property="BackgroundColor" Value="DeepSkyBlue" />
                         </Trigger>
                     </Button.Triggers>
+                    <Button.GestureRecognizers>
+                        <PointerGestureRecognizer
+                            PointerEntered="OnPointerEnteredButton"
+                            PointerExited="OnPointerExitedButton"
+                            />
+                    </Button.GestureRecognizers>
                 </Button>
 
                 <Button 
@@ -59,9 +65,15 @@
                     >
                     <Button.Triggers>
                         <Trigger TargetType="Button" Property="IsPressed" Value="True">
-                            <Setter Property="Opacity" Value="0.5" />
+                            <Setter Property="BackgroundColor" Value="Yellow" />
                         </Trigger>
                     </Button.Triggers>
+                    <Button.GestureRecognizers>
+                        <PointerGestureRecognizer
+                            PointerEntered="OnPointerEnteredButton"
+                            PointerExited="OnPointerExitedButton"
+                            />
+                    </Button.GestureRecognizers>
                 </Button>
 
             </HorizontalStackLayout>

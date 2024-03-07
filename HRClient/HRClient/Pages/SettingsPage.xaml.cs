@@ -30,4 +30,15 @@ public partial class SettingsPage : ContentPage
         BackgroundThemeSettings? previous = e.PreviousItem as BackgroundThemeSettings;
         //header.Text = $"Current: {current?.Name}  Previous: {previous?.Name}";
     }
+
+
+    private void OnPointerEnteredButton(object sender, EventArgs e)
+    {
+        ((Button)sender).Opacity = 0.5;
+    }
+
+    private void OnPointerExitedButton(object sender, EventArgs e)
+    {
+        ((Button)sender).Opacity = 1;
+    }
 }

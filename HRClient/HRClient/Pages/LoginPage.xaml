@@ -74,9 +74,15 @@
                     >
                     <Button.Triggers>
                         <Trigger TargetType="Button" Property="IsPressed" Value="True">
-                            <Setter Property="Opacity" Value="0.5" />
+                            <Setter Property="Opacity" Value="0.2" />
                         </Trigger>
                     </Button.Triggers>
+                    <Button.GestureRecognizers>
+                        <PointerGestureRecognizer
+                            PointerEntered="OnPointerEnteredButton"
+                            PointerExited="OnPointerExitedButton"
+                            />
+                    </Button.GestureRecognizers>
                 </Button>
             </StackLayout>
 
@@ -93,9 +99,15 @@
                 >
                 <Button.Triggers>
                     <Trigger TargetType="Button" Property="IsPressed" Value="True">
-                        <Setter Property="Opacity" Value="0.5" />
+                        <Setter Property="TextColor" Value="GreenYellow" />
                     </Trigger>
                 </Button.Triggers>
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer
+                            PointerEntered="OnPointerEnteredButton"
+                            PointerExited="OnPointerExitedButton"
+                            />
+                </Button.GestureRecognizers>
             </Button>
 
 
@@ -109,9 +121,15 @@
                 >
                 <Button.Triggers>
                     <Trigger TargetType="Button" Property="IsPressed" Value="True">
-                        <Setter Property="Opacity" Value="0.5" />
+                        <Setter Property="BackgroundColor" Value="DeepSkyBlue" />
                     </Trigger>
                 </Button.Triggers>
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer
+                        PointerEntered="OnPointerEnteredButton"
+                        PointerExited="OnPointerExitedButton"
+                        />
+                </Button.GestureRecognizers>
             </Button>
 
 
@@ -127,9 +145,15 @@
                 >
                 <Button.Triggers>
                     <Trigger TargetType="Button" Property="IsPressed" Value="True">
-                        <Setter Property="Opacity" Value="0.5" />
+                        <Setter Property="TextColor" Value="BlueViolet" />
                     </Trigger>
                 </Button.Triggers>
+                <Button.GestureRecognizers>
+                    <PointerGestureRecognizer
+                            PointerEntered="OnPointerEnteredButton"
+                            PointerExited="OnPointerExitedButton"
+                            />
+                </Button.GestureRecognizers>
             </Button>
 
             <Label

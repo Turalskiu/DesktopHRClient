@@ -46,4 +46,27 @@ public partial class ProfilePage : ContentPage
     private void SaveUserInfo(object sender, EventArgs e)
     {
     }
+
+
+    private void OnPointerEnteredImageButton(object sender, EventArgs e)
+    {
+        ((ImageButton)sender).Opacity = 0.5;
+    }
+
+    private void OnPointerExitedImageButton(object sender, EventArgs e)
+    {
+        ((ImageButton)sender).Opacity = 1;
+    }
+
+
+    private void OnPointerEnteredButton(object sender, EventArgs e)
+    {
+        ((Button)sender).Opacity = 0.5;
+    }
+
+    private void OnPointerExitedButton(object sender, EventArgs e)
+    {
+        ((Button)sender).Opacity = 1;
+    }
+
 }
