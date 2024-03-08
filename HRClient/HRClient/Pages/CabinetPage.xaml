@@ -94,7 +94,43 @@
                                     TextColor="Green"
                                     FontFamily="Selawik"
                                     FontAttributes="Bold"
-                                    FontSize="18"
+                                    FontSize="16"
+                                    />
+                            </VerticalStackLayout>
+
+                            <VerticalStackLayout
+                                HorizontalOptions="Center"
+                                WidthRequest="130"
+                                Margin="50,0 ,0, 0"
+                                >
+                                <ImageButton 
+                                    Source="invitations.png"
+                                    HeightRequest="115"
+                                    WidthRequest="130"
+                                    BackgroundColor="Transparent"
+                                    Padding="10"
+                                    >
+                                    <ImageButton.Triggers>
+                                        <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
+                                            <Setter Property="Opacity" Value="0.5" />
+                                        </Trigger>
+                                    </ImageButton.Triggers>
+                                    <ImageButton.GestureRecognizers>
+                                        <PointerGestureRecognizer
+                                            PointerEntered="OnPointerEnteredImageButton"
+                                            PointerExited="OnPointerExitedImageButton"
+                                            />
+                                    </ImageButton.GestureRecognizers>
+                                </ImageButton>
+                                <Label
+                                    Margin="10, 5, 0, 0"
+                                    HorizontalOptions="Center"
+                                    WidthRequest="130"
+                                    Text="Приглашения"
+                                    TextColor="Green"
+                                    FontFamily="Selawik"
+                                    FontAttributes="Bold"
+                                    FontSize="16"
                                     />
                             </VerticalStackLayout>
 
@@ -122,14 +158,13 @@
                                     </ImageButton.GestureRecognizers>
                                 </ImageButton>
                                 <Label
-                                    Margin="15, 5, 0, 0"
                                     HorizontalOptions="Center"
-                                    WidthRequest="130"
+                                    Margin="10, 5, 0, 0"
                                     Text="База знаний"
                                     TextColor="Green"
                                     FontFamily="Selawik"
                                     FontAttributes="Bold"
-                                    FontSize="18"
+                                    FontSize="16"
                                     />
                             </VerticalStackLayout>
 
@@ -139,41 +174,7 @@
                                 Margin="50,0 ,0, 0"
                                 >
                                 <ImageButton 
-                                    Source="template.png"
-                                    HeightRequest="115"
-                                    WidthRequest="130"
-                                    BackgroundColor="Transparent"
-                                    >
-                                    <ImageButton.Triggers>
-                                        <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
-                                            <Setter Property="Opacity" Value="0.5" />
-                                        </Trigger>
-                                    </ImageButton.Triggers>
-                                    <ImageButton.GestureRecognizers>
-                                        <PointerGestureRecognizer
-                                            PointerEntered="OnPointerEnteredImageButton"
-                                            PointerExited="OnPointerExitedImageButton"
-                                            />
-                                    </ImageButton.GestureRecognizers>
-                                </ImageButton>
-                                <Label
-                                    HorizontalOptions="Center"
-                                    Margin="10, 5, 0, 0"
-                                    Text="Конструктор"
-                                    TextColor="Green"
-                                    FontFamily="Selawik"
-                                    FontAttributes="Bold"
-                                    FontSize="18"
-                                    />
-                            </VerticalStackLayout>
-
-                            <VerticalStackLayout
-                                HorizontalOptions="Center"
-                                WidthRequest="130"
-                                Margin="50,0 ,0, 0"
-                                >
-                                <ImageButton 
-                                    Source="test.png"
+                                    Source="document.png"
                                     HeightRequest="115"
                                     WidthRequest="130"
                                     BackgroundColor="Transparent"
@@ -193,11 +194,11 @@
                                 <Label
                                     HorizontalOptions="Center"
                                     Margin="-5, 5, 0, 0"
-                                    Text="Тест"
+                                    Text="Документы"
                                     TextColor="Green"
                                     FontFamily="Selawik"
                                     FontAttributes="Bold"
-                                    FontSize="18"
+                                    FontSize="16"
                                     />
                             </VerticalStackLayout>
                         </HorizontalStackLayout>
@@ -213,7 +214,7 @@
                                 WidthRequest="130"
                                 >
                                 <ImageButton 
-                                    Source="invitations.png"
+                                    Source="template.png"
                                     HeightRequest="115"
                                     WidthRequest="130"
                                     BackgroundColor="Transparent"
@@ -233,19 +234,156 @@
                                 <Label
                                     HorizontalOptions="Center"
                                     Margin="-5, 5, 0, 0"
-                                    Text="Приглашения"
+                                    Text="Шаблоны"
                                     TextColor="Green"
                                     FontFamily="Selawik"
                                     FontAttributes="Bold"
-                                    FontSize="18"
+                                    FontSize="16"
                                     />
                             </VerticalStackLayout>
+                            <VerticalStackLayout
+                                HorizontalOptions="Center"
+                                WidthRequest="130"
+                                Margin="50,0 ,0, 0"
+                                >
+                                <ImageButton 
+                                    Source="test.png"
+                                    HeightRequest="115"
+                                    WidthRequest="130"
+                                    BackgroundColor="Transparent"
+                                    Padding="5"
+                                    >
+                                    <ImageButton.Triggers>
+                                        <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
+                                            <Setter Property="Opacity" Value="0.5" />
+                                        </Trigger>
+                                    </ImageButton.Triggers>
+                                    <ImageButton.GestureRecognizers>
+                                        <PointerGestureRecognizer
+                                            PointerEntered="OnPointerEnteredImageButton"
+                                            PointerExited="OnPointerExitedImageButton"
+                                            />
+                                    </ImageButton.GestureRecognizers>
+                                </ImageButton>
+                                <Label
+                                    HorizontalOptions="Center"
+                                    Margin="-5, 5, 0, 0"
+                                    Text="Тесты"
+                                    TextColor="Green"
+                                    FontFamily="Selawik"
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    />
+                            </VerticalStackLayout>
+                            <VerticalStackLayout
+                                HorizontalOptions="Center"
+                                WidthRequest="130"
+                                Margin="50,0 ,0, 0"
+                                >
+                                <ImageButton 
+                                    Source="course.png"
+                                    HeightRequest="115"
+                                    WidthRequest="130"
+                                    BackgroundColor="Transparent"
+                                    >
+                                    <ImageButton.Triggers>
+                                        <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
+                                            <Setter Property="Opacity" Value="0.5" />
+                                        </Trigger>
+                                    </ImageButton.Triggers>
+                                    <ImageButton.GestureRecognizers>
+                                        <PointerGestureRecognizer
+                                            PointerEntered="OnPointerEnteredImageButton"
+                                            PointerExited="OnPointerExitedImageButton"
+                                            />
+                                    </ImageButton.GestureRecognizers>
+                                </ImageButton>
+                                <Label
+                                    HorizontalOptions="Center"
+                                    Margin="5, 5, 0, 0"
+                                    Text="Курсы"
+                                    TextColor="Green"
+                                    FontFamily="Selawik"
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    />
+                            </VerticalStackLayout>
+                            <VerticalStackLayout
+                                HorizontalOptions="Center"
+                                WidthRequest="130"
+                                Margin="50,0 ,0, 0"
+                                >
+                                <ImageButton 
+                                    Source="education.png"
+                                    HeightRequest="115"
+                                    WidthRequest="130"
+                                    BackgroundColor="Transparent"
+                                    >
+                                    <ImageButton.Triggers>
+                                        <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
+                                            <Setter Property="Opacity" Value="0.5" />
+                                        </Trigger>
+                                    </ImageButton.Triggers>
+                                    <ImageButton.GestureRecognizers>
+                                        <PointerGestureRecognizer
+                                            PointerEntered="OnPointerEnteredImageButton"
+                                            PointerExited="OnPointerExitedImageButton"
+                                            />
+                                    </ImageButton.GestureRecognizers>
+                                </ImageButton>
+                                <Label
+                                    HorizontalOptions="Center"
+                                    Margin="0, 5, 0, 0"
+                                    Text="План обучения"
+                                    TextColor="Green"
+                                    FontFamily="Selawik"
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    />
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
 
+                        <HorizontalStackLayout
+                            VerticalOptions="Center"
+                            Margin="20,20, 0, 0"
+                            WidthRequest="700"
+                            >
+                            <VerticalStackLayout
+                                HorizontalOptions="Center"
+                                WidthRequest="130"
+                                >
+                                <ImageButton 
+                                    Source="statistic.png"
+                                    HeightRequest="115"
+                                    WidthRequest="130"
+                                    BackgroundColor="Transparent"
+                                    >
+                                    <ImageButton.Triggers>
+                                        <Trigger TargetType="ImageButton" Property="IsPressed" Value="True">
+                                            <Setter Property="Opacity" Value="0.7" />
+                                        </Trigger>
+                                    </ImageButton.Triggers>
+                                    <ImageButton.GestureRecognizers>
+                                        <PointerGestureRecognizer
+                                            PointerEntered="OnPointerEnteredImageButton"
+                                            PointerExited="OnPointerExitedImageButton"
+                                            />
+                                    </ImageButton.GestureRecognizers>
+                                </ImageButton>
+                                <Label
+                                    HorizontalOptions="Center"
+                                    Margin="-5, 5, 0, 0"
+                                    Text="Статистика"
+                                    TextColor="Green"
+                                    FontFamily="Selawik"
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    />
+                            </VerticalStackLayout>
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </ScrollView>
             </Frame>
-
 
         </VerticalStackLayout>
 
@@ -264,25 +402,29 @@
                 HasShadow="True"
                 HeightRequest="530"
                 >
-                <VerticalStackLayout>
-                    <Label
-                        Text="Пользователи"
-                        TextColor="Black"
-                        FontFamily="Selawik"
-                        FontAttributes="Bold"
-                        FontSize="20"
+                <ScrollView
+                    >
+                    <VerticalStackLayout
                         HorizontalOptions="Start"
+                        WidthRequest="240"
                         >
+                        <Label
+                            Text="Пользователи"
+                            TextColor="Black"
+                            FontFamily="Selawik"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            HorizontalOptions="Start"
+                            />
 
-                    </Label>
-                    <ScrollView>
                         <VerticalStackLayout
-                            x:Name="user_list"
-                            >
+                                x:Name="user_list"
+                                >
 
                         </VerticalStackLayout>
-                    </ScrollView>
-                </VerticalStackLayout>
+                    
+                    </VerticalStackLayout>
+                </ScrollView>
             </Frame>
         </VerticalStackLayout>
 
